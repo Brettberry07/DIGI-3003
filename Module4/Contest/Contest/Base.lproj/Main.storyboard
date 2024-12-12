@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Contest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter Your Email To Enter A Contest!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iD-Hp-oPJ">
+                                <rect key="frame" x="48" y="111" width="296" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="9bM-Au-JCg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xvs-Qg-U1T">
+                                <rect key="frame" x="16" y="349" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2k-1z-vet">
+                                <rect key="frame" x="158" y="409" width="78" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmitPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hma-Gf-OGM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xvs-Qg-U1T" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DVx-2g-RKB"/>
+                            <constraint firstItem="l2k-1z-vet" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="158" id="Ip8-dW-e6t"/>
+                            <constraint firstItem="Xvs-Qg-U1T" firstAttribute="centerX" secondItem="l2k-1z-vet" secondAttribute="centerX" id="Z5n-SS-sSM"/>
+                            <constraint firstItem="l2k-1z-vet" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gv5-pQ-gNc"/>
+                            <constraint firstItem="9iD-Hp-oPJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="iar-5p-DA0"/>
+                            <constraint firstItem="Xvs-Qg-U1T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iy4-hC-QtZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="l2k-1z-vet" secondAttribute="bottom" constant="374" id="nqd-Wv-8hu"/>
+                            <constraint firstItem="l2k-1z-vet" firstAttribute="top" secondItem="Xvs-Qg-U1T" secondAttribute="bottom" constant="26" id="qE5-qV-Cxz"/>
+                            <constraint firstItem="9iD-Hp-oPJ" firstAttribute="centerX" secondItem="Xvs-Qg-U1T" secondAttribute="centerX" id="vaA-3H-Ut0"/>
+                            <constraint firstItem="9iD-Hp-oPJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="xng-vd-Tdt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailAdressField" destination="Xvs-Qg-U1T" id="Xnx-tM-cDM"/>
+                        <segue destination="04w-Fk-tu5" kind="show" identifier="toConfirmation" id="gUN-ud-axb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155" y="4"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yeO-jV-jY8">
+            <objects>
+                <viewController id="04w-Fk-tu5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DtQ-Q5-dbx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Successfully Entered The Contest!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOt-YB-VCi">
+                                <rect key="frame" x="16" y="217" width="361" height="221"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eCi-P1-k1D"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fOt-YB-VCi" firstAttribute="trailing" secondItem="DtQ-Q5-dbx" secondAttribute="trailingMargin" id="2Ki-QX-KRH"/>
+                            <constraint firstItem="eCi-P1-k1D" firstAttribute="bottom" secondItem="fOt-YB-VCi" secondAttribute="bottom" constant="404" id="5JS-ff-NDu"/>
+                            <constraint firstItem="fOt-YB-VCi" firstAttribute="leading" secondItem="DtQ-Q5-dbx" secondAttribute="leadingMargin" id="5LY-aH-Ctp"/>
+                            <constraint firstItem="fOt-YB-VCi" firstAttribute="top" secondItem="eCi-P1-k1D" secondAttribute="top" constant="217" id="p0b-Ov-147"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TlO-Z5-2OO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k3E-jC-m7A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922.90076335877859" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
